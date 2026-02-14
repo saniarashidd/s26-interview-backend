@@ -3,8 +3,8 @@ import { unstable_noStore } from "next/cache";
 
 export async function GET() {
   const supabase = createClient(
-    process.env.SUPABASE_URL!,
-    process.env.SUPABASE_KEY!
+    process.env.NEXT_PUBLIC_HIBISCUS_SUPABASE_API_URL!,
+    process.env.NEXT_PUBLIC_HIBISCUS_SUPABASE_ANON_KEY!
   );
   unstable_noStore();
 
