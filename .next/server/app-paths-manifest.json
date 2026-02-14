@@ -1,0 +1,9 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/rank/[slug]/route": "app/api/rank/[slug]/route.js",
+  "/api/request/route": "app/api/request/route.js",
+  "/api/reset/route": "app/api/reset/route.js",
+  "/api/projects/route": "app/api/projects/route.js",
+  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}
