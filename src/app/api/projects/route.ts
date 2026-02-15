@@ -27,15 +27,6 @@
 import { createClient } from "@supabase/supabase-js";
 import { unstable_noStore } from "next/cache";
 
-const headers = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Methods": "GET, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type, Authorization",
-};
-
-export async function OPTIONS() {
-  return new Response(null, { headers });
-}
 
 export async function GET() {
   unstable_noStore();
@@ -50,7 +41,7 @@ export async function GET() {
   if (res.error) {
     return new Response(
       JSON.stringify({ error: res.error.message }),
-      { status: 500, headers }
+      { status: 500 }
     );
   }
 
@@ -58,6 +49,6 @@ export async function GET() {
     JSON.stringify({
       data: res.data.toSorted((a, b) => a.rank - b.rank),
     }),
-    { status: 200, headers }
+    { status: 200 }
   );
 }

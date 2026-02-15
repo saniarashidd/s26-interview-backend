@@ -17,8 +17,8 @@ export async function PUT(
   }
 
   const supabase = createClient(
-    process.env.SUPABASE_URL!,
-    process.env.SUPABASE_KEY!
+    process.env.NEXT_PUBLIC_HIBISCUS_SUPABASE_API_URL!,
+    process.env.NEXT_PUBLIC_HIBISCUS_SUPABASE_ANON_KEY!
   );
 
   const res = await supabase
